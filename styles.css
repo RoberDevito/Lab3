@@ -1,0 +1,640 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #574142;
+}
+
+h2 {
+    margin: 0;
+}
+
+h3{
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+.barra {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #0c0505;
+    color: white;
+    z-index: 10;
+    padding: 0px 2rem;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.barra img {
+    width: 100px;
+    height: auto;
+}
+
+.barra ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    align-items: center; 
+    font-size: 20px;
+}
+
+.barra li {
+    color: white;
+    transition: font-size 0.3s;
+}
+
+.barra li:hover{
+    font-size: 25px;
+}
+
+.barra a {
+    color: #fff;
+    text-decoration: none; 
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.barra a:hover {
+    color: #b13535;
+}
+
+/*Bienvenidos*/
+
+.video-container {
+    position: relative;
+    height: 100vh; 
+    width: 100vw;
+    overflow: hidden;
+}
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+}
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 40vh;
+    color: white;
+}
+
+.content h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+}
+
+
+.content p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto 2em;
+}
+
+.btn {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary{
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-secondary{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-primary:hover {
+    background-color: #c0392b;
+}
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*Menu*/
+
+.h2-menu {
+    background-color: maroon;
+    text-transform: uppercase;
+    font-size: 30px; 
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.h3-menu {
+    font-size: 25px; 
+    font-weight: bold;
+    color: #fff; 
+    text-align: center;
+    padding: 10px;
+    width: 11%;
+    margin:14px auto; 
+    text-transform: uppercase;
+    border-bottom: 2px solid red ;
+}
+
+/*Platos destacados*/
+
+.platos-destacados{
+    background-color: #e74c3c;
+    color: #fff;
+    text-align: center;
+    height: 500px;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: 50%;
+}
+
+.platos-destacados h2{
+    text-transform: uppercase;
+    
+}
+
+.platos-destacados h2{
+    padding: 10px 0px;
+
+}
+
+.platos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.plato1{
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.plato1:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+
+.plato1 h3{
+    font-family: 'Bebas Neue';
+    background-color: rgb(128, 38, 38);
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.img-plato1{
+    border-radius: 5px 5px 0px 0px;
+    background-image: url('/img/paella-valenciana.jpg');
+    height: 200px;
+    background-size: cover;
+}
+
+.plato1 p{
+    font-family: 'Helvetica';
+    color: #000;
+    margin: 5px;
+}
+
+.plato2{
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.plato2:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+.plato2 .img-plato2{
+    border-radius: 5px 5px 0px 0px;
+    background-image: url('/img/filete.jpg');
+    background-size: cover;
+    height: 200px;
+    
+}
+
+.plato2 h3{
+    font-family: 'Bebas Neue';
+    background-color: rgb(128, 38, 38);
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.plato2 p{
+    font-family: 'Helvetica';
+    color: #000;
+    margin: 5px;
+}
+
+.precio{
+    margin: 5px;
+    text-align: center;
+}
+
+/*Entrada,postre,etc*/
+
+.div-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.carta {
+    width: 300px;
+    height: 420px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 10px; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.carta:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+
+.imagen-producto {
+    height: 200px;
+    background-image: url('img/bruschetta.jpg');
+    background-size: cover;
+}
+
+
+.imagen-producto1 {
+    height: 200px;
+    background-image: url('img/carlitos.jpg');
+    background-size: cover;
+}
+
+.imagen-producto2 {
+    height: 200px;
+    background-image: url('img/ensalada\ caprese.jpg');
+    background-size: cover;
+}
+
+.imagen-producto3 {
+    height: 200px;
+    background-image: url('img/provoleta.jpg');
+    background-size: cover;
+}
+
+.imagen-postre {
+    height: 200px;
+    background-image: url('img/tiramisu.jpg');
+    background-size: cover;
+}
+
+.imagen-postre1{
+    height: 200px;
+    background-image: url('img/flan.jpg');
+    background-size: cover;
+}
+
+.imagen-postre2{
+    height: 200px;
+    background-image: url('img/chocotorta1.jpg');
+    background-size: cover;
+}
+
+.imagen-postre3{
+    height: 200px;
+    background-image: url('img/Panna-cottajpg.jpg');
+    background-size: cover;
+}
+
+.imagen-bebida{
+    height: 200px;
+    background-image: url('img/cocacola.jpg');
+    background-size: cover;
+}
+
+.imagen-bebida1{
+    height: 200px;
+    background-image: url('img/sprite.jpg');
+    background-size: cover;
+}
+
+.imagen-bebida2{
+    height: 200px;
+    background-image: url('img/brahama.jpg');
+    background-size: cover;
+}
+
+.imagen-bebida3{
+    height: 200px;
+    background-image: url('img/heineken2.jpg');
+    background-size: cover;
+}
+
+.detalles h2 {
+    font-family: 'Bebas Neue';
+    font-size: 30px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgb(128, 38, 38);
+}
+
+.detalles p {
+    font-family: 'Helvetica';
+    margin: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.precio {
+    color: rgb(255, 51, 0);
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.precio-sprite{
+    color: rgb(255, 51, 0);
+    text-align: center;
+    font-size: 18px;
+    padding-top: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.precio-flan{
+    color: rgb(255, 51, 0);
+    text-align: center;
+    font-size: 18px;
+    padding-top: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.precio-pannacotta{
+    color: rgb(255, 51, 0);
+    text-align: center;
+    font-size: 18px;
+    padding-top: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.precio-heineken{
+    color: rgb(255, 51, 0);
+    text-align: center;
+    font-size: 18px;
+    padding-top: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*reservas*/
+
+.reservas-fondo{
+    display: grid;
+    align-content: center;
+    border-top:2px #b13535;
+    background-color: #0b080e;
+    padding: 15px;
+    height: 100vh;
+}
+
+.titulo-reserva{
+    margin: 5px auto;
+    background-color: black;
+    text-align: center;
+    color: #f0f0f0;
+    width: 15%;
+    padding: 10px;
+    text-transform: uppercase;
+
+}
+
+.reservas {
+    background-color: #442b3b;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: 50%;
+}
+
+.reservas h2 {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+}
+
+form button {
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/*footer*/
+
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 3rem 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.footer-sesion h3 {
+    color: #3498db;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-sesion p{
+    margin-bottom: 0.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: #ecf0f1;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #3498db;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+    color: #3498db;
+}
+
+.Informacion form {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.Informacion button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Informacion button:hover {
+    background-color: #2980b9;
+}
+
+.footer-boton {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #34495e;
+}
+
+
+/*res*/
+
+@media (max-width: 600px) {
+    .barra {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .barra ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .barra img {
+        width: 80px;
+    }
+    
+    .content h1 {
+        font-size: 2em;
+    }
+    .content p {
+        font-size: 1em;
+        padding: 0 1rem;
+    }
+    .btn {
+        padding: 8px 16px;
+    }
+
+    .h2-menu {
+        font-size: 25px;
+    }
+
+    .h3-menu {
+        font-size: 20px;
+        width: auto;
+        margin: 10px;
+    }
+
+    .platos-destacados {
+        width: 90%;
+        height: auto;
+    }
+
+    .carta {
+        width: 80%;
+        margin: 10px auto;
+        height: 20%;
+    }
+
+    .reservation {
+        width: 90%;
+    }
+
+    .titulo-reserva {
+        width: 80%;
+    }
+}
+
